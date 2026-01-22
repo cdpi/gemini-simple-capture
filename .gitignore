@@ -1,2 +1,6 @@
 
 build.sh
+xpi.sh
+
+*.xpi
+*.zip
