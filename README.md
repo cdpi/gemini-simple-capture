@@ -1,1 +1,1 @@
-# gemini-simple-capture
+# Gemini Simple Capture
