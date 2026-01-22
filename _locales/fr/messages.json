@@ -1,5 +1,6 @@
 {
 "extension_name": {"message": "Gemini Simple Capture"},
 "extension_description": {"message": "Enregistrez simplement des conversations Gemini au format markdown."},
-"action_default_title": {"message": "action_default_title fr"}
+"action_disabled_title": {"message": "Enregistrer la conversation (est désactivé sur cette page)"},
+"action_enabled_title": {"message": "Enregistrer la conversation"}
 }

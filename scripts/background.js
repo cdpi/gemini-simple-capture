@@ -1,13 +1,19 @@
 
-import { slugify } from "./utils.js";
+import { download, slugify } from "./utils.js";
 
-async function actionOnClicked(tab)
+function runtimeOnInstalled()
 	{
-	console.log(tab.title + " - " + slugify(tab.title));
 	}
 
-//browser.runtime.onInstalled.addListener(() => {});
+function actionOnClicked(tab)
+	{
+	//console.log(tab.title + " - " + slugify(tab.title));
 
-//browser.contextMenus.onClicked.addListener((info, tab) => {});
+	browser.tabs.sendMessage(tab.id, {action: "gemini-download"});
+
+	//download("# Gemini sdjskjhfsdkf", "text/markdown", "example.md");
+	}
+
+browser.runtime.onInstalled.addListener(runtimeOnInstalled);
 
 browser.action.onClicked.addListener(actionOnClicked);

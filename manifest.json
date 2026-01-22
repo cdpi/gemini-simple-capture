@@ -6,6 +6,7 @@
 "default_locale": "fr",
 "icons":
 	{
+	"16": "icons/icon16x16.png",
 	"32": "icons/icon32x32.png",
 	"48": "icons/icon48x48.png",
 	"64": "icons/icon64x64.png",
@@ -23,12 +24,20 @@
 	],
 "action":
 	{
-	"default_icon": "icons/icon48x48.png",
-	"default_title": "__MSG_action_default_title__"
+	"default_icon": "icons/icon16x16bw.png",
+	"default_title": "__MSG_action_disabled_title__"
 	},
 "background":
 	{
 	"scripts": ["scripts/background.js"],
 	"type": "module"
-	}
+	},
+"content_scripts":
+	[
+		{
+		"matches": ["https://gemini.google.com/share/*"],
+		"js": ["scripts/content.js"],
+		"run_at": "document_end"
+		}
+	]
 }
